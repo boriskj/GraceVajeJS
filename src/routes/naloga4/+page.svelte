@@ -1,8 +1,20 @@
 <script lang="ts">
 	// Napiši funkcijo, ki vrne preveri besedo in vrne slovar z vsemi črkami in število pojavitev.
-	function steviloPojavitev(beseda: string) {}
+	function steviloPojavitev(beseda: string) {
+		let rezultat: Record<string, number> = {};
 
-	console.log(steviloPojavitev('banana'));
+		beseda.split('').forEach((crka) => {
+			if (crka in rezultat) {
+				rezultat[crka] = rezultat[crka] + 1;
+			} else {
+				rezultat[crka] = 1;
+			}
+		});
+
+		return rezultat;
+	}
+
+	console.log(steviloPojavitev('Borisb  ')); // ["b", "a", "n", "a", ...]
 	// Pričakovani rezultat: { b: 1, a: 3, n: 2 }
 </script>
 

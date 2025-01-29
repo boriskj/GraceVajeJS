@@ -2,10 +2,20 @@
 	// Napiši funkcijo, ki kot argument sprejme seznam števil in kot rezultat vrne njihov zmnožek.
 	// V primeru, da je seznam prazen, naj funkcija vrne 0.
 
-	let seznam: number[] = [4, 5, 1, 489];
+	let seznam: number[] = [4, 5, 1, 49];
 	let prazenSeznam: number[] = [];
 
-	function zmnozi(stevila: number[]) {}
+	function zmnozi(stevila: number[]) {
+		if (stevila.length === 0) {
+			return 0; // Če je seznam prazen, vrne 0
+		}
+
+		let rezultat = 1;
+		for (let stevilo of stevila) {
+			rezultat *= stevilo; // Množi vse številke v seznamu
+		}
+		return rezultat;
+	}
 
 	console.log(zmnozi(seznam)); // Test klica funkcije
 	console.log(zmnozi(prazenSeznam)); // Test klica funkcije
