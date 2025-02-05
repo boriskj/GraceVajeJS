@@ -1,7 +1,10 @@
 <script lang="ts">
 	// Napiši funkcijo, ki iz seznama besed vrne samo tiste, ki imajo več kot 5 znakov.
-	let seznam: string[] = ['hiša', 'avtomobil', 'miza', 'programiranje'];
-	function filtrirajDolgeBesede(besede: string[]) {}
+	let seznam: string[] = ['hiša', 'avtomobil', 'mizA', 'programiranje'];
+	function filtrirajDolgeBesede(besede: string[]) {
+		return besede.filter((b) => b.length > 5);
+		//console.log(besede.length);
+	}
 
 	console.log(filtrirajDolgeBesede(seznam));
 	// Pričakovani rezultat: ["avtomobil", "programiranje"]

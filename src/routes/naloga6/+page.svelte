@@ -2,7 +2,9 @@
 	// Napiši funkcijo, ki bo filtrirala seznam objektov tipa Oseba ({ ime: string; starost: number }) in izpisala samo osebe starejše od 18 let
 	type Oseba = { ime: string; starost: number };
 
-	function filtrirajOdrasle(ljudje: Oseba[]) {}
+	function filtrirajOdrasle(ljudje: Oseba[]) {
+		return ljudje.filter((b) => b.starost > 18);
+	}
 
 	const osebe: Oseba[] = [
 		{ ime: 'Ana', starost: 16 },
@@ -10,7 +12,6 @@
 		{ ime: 'Luka', starost: 25 },
 		{ ime: 'Eva', starost: 14 }
 	];
-
 	console.log(filtrirajOdrasle(osebe));
 	// Pričakovani rezultat: [{ ime: "Marko", starost: 20 }, { ime: "Luka", starost: 25 }]
 </script>

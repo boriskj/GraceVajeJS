@@ -14,7 +14,7 @@
 		return rezultat;
 	}
 
-	console.log(steviloPojavitev('Borisb  ')); // ["b", "a", "n", "a", ...]
+	console.log(steviloPojavitev('Boris')); // ["b", "a", "n", "a", ...]
 	// Pričakovani rezultat: { b: 1, a: 3, n: 2 }
 </script>
 
